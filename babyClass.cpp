@@ -14,16 +14,16 @@ class baby{
 	//Initialisation, basic running and required converting
 	void initialise();
 	void cpu();
-	int convertBinary();
-	string convertDecimal();
+	int convertBinary(); //Convert binary to decimal
+	string convertDecimal(); //Convert Decimal to binary
 
 	//Loading file
 	void loadBinaryFromFile(); //normal loading
 
 	// Fetch/Execute
 	void getInstructions(); //Assembler loading
-	void fetch();
-	void decode();
+	void fetch(); //Fetch code and add to PI
+	void decode(); //Decode the instruction code
 	void execute();
 
 	//Commands
