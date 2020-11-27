@@ -18,10 +18,10 @@ class baby{
 	string convertDecimal();
 
 	//Loading file
-	void loadBinaryFromFile();
+	void loadBinaryFromFile(); //normal loading
 
 	// Fetch/Execute
-	void getInstructions();
+	void getInstructions(); //Assembler loading
 	void fetch();
 	void decode();
 	void execute();
