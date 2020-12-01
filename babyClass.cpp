@@ -120,7 +120,7 @@ void baby::fetch()
 	int fetch[32];
 	int hold = 0;
 
-	hold = convertBinary(CI);
+	//hold = convertBinary(CI);
 
 	for (int i=0;i<32;i++)
 	{
