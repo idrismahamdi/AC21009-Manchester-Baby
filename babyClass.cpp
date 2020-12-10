@@ -118,13 +118,13 @@ void baby::fetch()
 {
 
 	int fetch[32];
-	int hold = 0;
+	int hold = CI;
 
-	//hold = convertBinary(CI);
+
 
 	for (int i=0;i<32;i++)
 	{
-		fetch[i] = store[hold][i];
+		fetch[i] = store[CI][i];
 	}
 
 	PI[32] = convertDecimal(fetch);
