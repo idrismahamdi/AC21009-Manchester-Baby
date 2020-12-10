@@ -312,3 +312,50 @@ int ManchesterBaby::decode(int address)
 
 	return decode;
 }
+
+
+void Baby::JMP(int decode)
+{
+
+    
+    for (int i=0; i<32; i++)
+    {
+        
+        CI[i] += std::stoi(store[decode][i]);
+    }
+
+}
+
+
+void Baby::JRP(int decode)
+{
+    int hold = 0;
+    
+    for (int i=0; i<31; i++)
+        {
+            if ((CI[31 - i] == '0') && (store[decode][31-i] == '0')
+            {
+                if (hold == 0){
+                    CI[31 - i] = 0;
+                }else
+                {
+                    hold--;
+                    CI[31 - i] = 1;
+                }
+                    
+               
+            }
+          
+            else if ((!(CI[31 - i] == 1)) != (!(store[decode][31-i]) == 1))
+            {
+               CI[31 - i] = '1';
+            } else
+            {
+                hold += 1;
+            }
+            
+            
+            
+        }
+    
+}
